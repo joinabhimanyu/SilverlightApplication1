@@ -1,0 +1,516 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" 
+  xmlns:prim="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data" 
+  xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  
+  xmlns:System="clr-namespace:System;assembly=mscorlib"
+  xmlns:inputToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" 
+  xmlns:layoutToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit"
+  xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+   xmlns:System_Windows_Controls_Primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls" 
+   xmlns:System_Windows_Controls_Primitives1="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data"
+   xmlns:local="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+  xmlns:layoutPrimitivesToolkit="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Layout.Toolkit"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" x:Class="SilverlightApplication1.MainPage" 
+    mc:Ignorable="d"
+    d:DesignHeight="1200" d:DesignWidth="1020" Loaded="OnLoad">
+	<UserControl.Resources>
+		
+		<Storyboard x:Name="EllipseStoryboard" AutoReverse="True" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="ellipse">
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="190">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="190">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="272">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="ellipse">
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-40">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ellipse">
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.96">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="ellipse">
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="126">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="1474.992">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BounceEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Name="NestedCanvasStoryboard">
+			<DoubleAnimation Duration="0:0:1" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="nestedCanvas" d:IsOptimized="True">
+				<DoubleAnimation.EasingFunction>
+					<ElasticEase EasingMode="EaseInOut"/>
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+		</Storyboard>
+		<Storyboard x:Name="CloudStoryboard" AutoReverse="True" RepeatBehavior="Forever">
+			<DoubleAnimation Duration="0:0:1" To="1.4" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="callout" d:IsOptimized="True">
+				<DoubleAnimation.EasingFunction>
+					<BackEase EasingMode="EaseOut"/>
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+			<DoubleAnimation Duration="0:0:1" To="1.8" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="callout" d:IsOptimized="True">
+				<DoubleAnimation.EasingFunction>
+					<BackEase EasingMode="EaseOut"/>
+				</DoubleAnimation.EasingFunction>
+			</DoubleAnimation>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="callout">
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="170">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="170">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="170">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:5" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="callout">
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="70">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-100">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+				<EasingDoubleKeyFrame KeyTime="0:0:4" Value="0">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<BackEase EasingMode="EaseOut"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Style x:Key="ButtonStyle1" TargetType="Button">
+			<Setter Property="Background" Value="#FF1F3B53"/>
+			<Setter Property="Foreground" Value="#FF000000"/>
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA3AEB9" Offset="0"/>
+						<GradientStop Color="#FF8399A9" Offset="0.375"/>
+						<GradientStop Color="#FF718597" Offset="0.375"/>
+						<GradientStop Color="#FF617584" Offset="1"/>
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid HorizontalAlignment="Left" Height="100" Width="75">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ellipse">
+												<EasingDoubleKeyFrame KeyTime="0" Value="1.1"/>
+												<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.6"/>
+											</DoubleAnimationUsingKeyFrames>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ellipse">
+												<EasingDoubleKeyFrame KeyTime="0" Value="1.1"/>
+												<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.6"/>
+											</DoubleAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="ellipse">
+												<EasingColorKeyFrame KeyTime="0" Value="#FFAC8A2E"/>
+												<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF574619"/>
+											</ColorAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Ellipse x:Name="ellipse" HorizontalAlignment="Left" StrokeThickness="10" Width="83" Margin="11,22,-19,-2" RenderTransformOrigin="0.5,0.5">
+								<Ellipse.RenderTransform>
+									<CompositeTransform/>
+								</Ellipse.RenderTransform>
+								<Ellipse.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFE0AD26" Offset="0"/>
+										<GradientStop Color="#FFFD9C11" Offset="1"/>
+									</LinearGradientBrush>
+								</Ellipse.Fill>
+							</Ellipse>
+							<ContentPresenter HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="56" Margin="30,54,-11,0" RenderTransformOrigin="0.5,0.5"/>
+
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="Canvas2btn1Style" TargetType="Button">
+			<Setter Property="Background" Value="#FF1F3B53"/>
+			<Setter Property="Foreground" Value="#FF000000"/>
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA3AEB9" Offset="0"/>
+						<GradientStop Color="#FF8399A9" Offset="0.375"/>
+						<GradientStop Color="#FF718597" Offset="0.375"/>
+						<GradientStop Color="#FF617584" Offset="1"/>
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="regularPolygon">
+												<EasingColorKeyFrame KeyTime="0:0:0.5" Value="#FF610A59"/>
+												<EasingColorKeyFrame KeyTime="0:0:1" Value="#FF32062E"/>
+												<EasingColorKeyFrame KeyTime="0:0:1.5" Value="#FF130610"/>
+											</ColorAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="regularPolygon">
+												<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+												<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.8">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+												<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.2">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+												<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.5">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+											</DoubleAnimationUsingKeyFrames>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="regularPolygon">
+												<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.9">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+												<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.8">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+												<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.2">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+												<EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.5">
+													<EasingDoubleKeyFrame.EasingFunction>
+														<SineEase EasingMode="EaseInOut"/>
+													</EasingDoubleKeyFrame.EasingFunction>
+												</EasingDoubleKeyFrame>
+											</DoubleAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused"/>
+									<VisualState x:Name="Unfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							<ed:RegularPolygon x:Name="regularPolygon" HorizontalAlignment="Left" Height="100" InnerRadius="0.47211" Margin="0,0,-14,-32" PointCount="5" Stretch="Fill" Stroke="#FF6DBDD1" StrokeThickness="1" UseLayoutRounding="False" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
+								<ed:RegularPolygon.RenderTransform>
+									<CompositeTransform/>
+								</ed:RegularPolygon.RenderTransform>
+								<ed:RegularPolygon.Fill>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FF9C1990" Offset="0"/>
+										<GradientStop Color="#FFF70606" Offset="1"/>
+									</LinearGradientBrush>
+								</ed:RegularPolygon.Fill>
+							</ed:RegularPolygon>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonStyle3" TargetType="Button">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<Path Data="M429.5,3.5 C417.507,-22.1067 380.686,-55 464,-55 C483.374,-55 504.962,-51.1924 524,-55 C534.348,-57.0695 534.182,-52.7938 540.5,-37 C541.906,-33.4847 546.66,-17.9222 540.5,-14.5 C522.528,-4.5158 510.726,-5.14304 501.5,17 C492.655,38.2286 511.906,46.3753 527,66.5 C531.369,72.3248 535.746,78.4067 539,86 C543.558,96.6354 545.597,104.757 540.5,117.5 C531.327,140.432 502.728,140.737 464,117.5 C431.99,98.294 490.291,19.548 416,62 C377.506,83.9963 410.355,158.33 341,120.5 C312.183,104.781 320,100.659 320,62 C320,33.8903 319.212,36.2236 365,30.5 C375.34,29.2075 387.241,23.9138 398,27.5 C408.166,30.8888 402.672,41.5485 414.5,38 C431.905,32.7784 426.176,22.8585 429.5,3.5 z" Stretch="Fill" Stroke="#FF6DBDD1" StrokeThickness="1" UseLayoutRounding="False"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RenderTransformOrigin="0.5,0.5" Width="117">
+								<ContentPresenter.RenderTransform>
+									<CompositeTransform Rotation="-22.62"/>
+								</ContentPresenter.RenderTransform>
+							</ContentPresenter>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonStyle2" TargetType="Button">
+			<Setter Property="Background" Value="#FF1F3B53"/>
+			<Setter Property="Foreground" Value="#FF000000"/>
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA3AEB9" Offset="0"/>
+						<GradientStop Color="#FF8399A9" Offset="0.375"/>
+						<GradientStop Color="#FF718597" Offset="0.375"/>
+						<GradientStop Color="#FF617584" Offset="1"/>
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused"/>
+									<VisualState x:Name="Unfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Button Content="Button" HorizontalAlignment="Left" Height="191.299" Margin="319.033,-55.486,-348.578,-75.813" Style="{StaticResource ButtonStyle3}" VerticalAlignment="Top" Width="225.545"/>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonStyle4" TargetType="Button">
+			<Setter Property="Background" Value="#FF1F3B53"/>
+			<Setter Property="Foreground" Value="#FF000000"/>
+			<Setter Property="Padding" Value="3"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush">
+				<Setter.Value>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFA3AEB9" Offset="0"/>
+						<GradientStop Color="#FF8399A9" Offset="0.375"/>
+						<GradientStop Color="#FF718597" Offset="0.375"/>
+						<GradientStop Color="#FF617584" Offset="1"/>
+					</LinearGradientBrush>
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualStateGroup.Transitions>
+										<VisualTransition From="MouseOver" GeneratedDuration="0">
+											<Storyboard>
+												<PointAnimation Duration="0:0:1" To="0.603,0.925" Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.EndPoint)" Storyboard.TargetName="ellipse"/>
+												<DoubleAnimation Duration="0:0:1" To="0.725" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="ellipse"/>
+												<PointAnimation Duration="0:0:1" To="0.766,0.075" Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.StartPoint)" Storyboard.TargetName="ellipse"/>
+											</Storyboard>
+										</VisualTransition>
+									</VisualStateGroup.Transitions>
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<PointAnimation Duration="0:0:1" To="0.647,0.913" Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.EndPoint)" Storyboard.TargetName="ellipse"/>
+											<DoubleAnimation Duration="0:0:1" To="0.849" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="ellipse"/>
+											<PointAnimation Duration="0:0:1" To="0.361,0.189" Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.StartPoint)" Storyboard.TargetName="ellipse"/>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimation Duration="0:0:1" To="0.9" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="ellipse" d:IsOptimized="True">
+												<DoubleAnimation.EasingFunction>
+													<BackEase EasingMode="EaseInOut"/>
+												</DoubleAnimation.EasingFunction>
+											</DoubleAnimation>
+											<DoubleAnimation Duration="0:0:1" To="0.9" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="ellipse" d:IsOptimized="True">
+												<DoubleAnimation.EasingFunction>
+													<BackEase EasingMode="EaseInOut"/>
+												</DoubleAnimation.EasingFunction>
+											</DoubleAnimation>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+								<VisualStateGroup x:Name="FocusStates">
+									<VisualState x:Name="Focused"/>
+									<VisualState x:Name="Unfocused"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							<Ellipse x:Name="ellipse" HorizontalAlignment="Left" Height="139" VerticalAlignment="Top" Width="136" Margin="0,0,0,-83" RenderTransformOrigin="0.5,0.5">
+								<Ellipse.RenderTransform>
+									<CompositeTransform/>
+								</Ellipse.RenderTransform>
+								<Ellipse.Fill>
+									<LinearGradientBrush EndPoint="0.081,0.615" StartPoint="0.5,0">
+										<GradientStop Color="#FFAB7BDA"/>
+										<GradientStop Color="#FF8613F9" Offset="0.426"/>
+									</LinearGradientBrush>
+								</Ellipse.Fill>
+							</Ellipse>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		
+	</UserControl.Resources>
+
+	<i:Interaction.Triggers>
+		<i:EventTrigger EventName="Click" SourceName="btnAnimate">
+			<ei:ControlStoryboardAction x:Name="ControlEllipseBehaviour" Storyboard="{StaticResource EllipseStoryboard}"/>
+			<ei:ControlStoryboardAction x:Name="ControlNestedCanvasBehaviour" Storyboard="{StaticResource NestedCanvasStoryboard}"/>
+			<ei:ControlStoryboardAction x:Name="ControlCloudBehaviour" Storyboard="{StaticResource CloudStoryboard}"/>
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+
+	<Grid x:Name="LayoutRoot" Background="White">
+		<Canvas x:Name="Canvas1" Width="1020" Height="390" Margin="0,0,0,810">
+			<Canvas.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FF229C1C" Offset="0"/>
+					<GradientStop Color="#FF1DC2D3" Offset="1"/>
+				</LinearGradientBrush>
+			</Canvas.Background>
+			<Ellipse x:Name="ellipse" Height="100" Stroke="Black" Width="100" Margin="140,40,0,0" RenderTransformOrigin="0.5,0.5">
+				<Ellipse.RenderTransform>
+					<CompositeTransform/>
+				</Ellipse.RenderTransform>
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF0F8BF3" Offset="0.009"/>
+						<GradientStop Color="#FF13F1BF" Offset="1"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+			<Button x:Name="btnAnimate" Content="Animate" Width="101" Style="{StaticResource ButtonStyle1}" Canvas.Left="630" Canvas.Top="12" Height="123"/>
+			
+			<Canvas x:Name="nestedCanvas" Width="292" Height="110" Canvas.Top="225" Canvas.Left="345" Opacity="0">
+				<Canvas.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FF09AA26" Offset="0"/>
+						<GradientStop Color="#FF08EACC" Offset="1"/>
+					</LinearGradientBrush>
+				</Canvas.Background>
+				<TextBlock Text="Nested Canvas" Canvas.Top="45" Canvas.Left="88" FontWeight="Bold" TextTrimming="WordEllipsis" TextWrapping="Wrap" FontSize="14.667" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			</Canvas>
+
+
+			<ed:Callout x:Name="callout" AnchorPoint="0,1.5" CalloutStyle="Cloud" Content="Callout" FontSize="14.666999816894531" Height="100" Width="200" Foreground="#FF16EC33" StrokeThickness="10" Margin="90,250,0,0" RenderTransformOrigin="0.5,0.5">
+				<ed:Callout.RenderTransform>
+					<CompositeTransform/>
+				</ed:Callout.RenderTransform>
+				<ed:Callout.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFAE757B" Offset="0"/>
+						<GradientStop Color="#FFF211FD" Offset="1"/>
+						<GradientStop Color="#FFCA95CD" Offset="0.866"/>
+						<GradientStop Color="#FFF11551" Offset="0.547"/>
+						<GradientStop Color="#FFFF0B21" Offset="0.246"/>
+					</LinearGradientBrush>
+				</ed:Callout.Fill>
+			</ed:Callout>
+
+
+		</Canvas>
+
+		<Canvas x:Name="Canvas2" Height="420">
+			
+			<Button x:Name="btn1" Width="86" Height="68" Margin="510,60,0,0" Style="{StaticResource Canvas2btn1Style}">
+				
+			</Button>
+			<Button x:Name="btn2" Width="166" Height="56" Margin="190,240,0,0" Style="{StaticResource ButtonStyle4}"></Button>
+		</Canvas>
+
+
+	</Grid>
+</UserControl>
